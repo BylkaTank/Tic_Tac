@@ -2,7 +2,7 @@
 
 using namespace std;
 string TicToc(string gameresult) {
-    int x, o = 0;
+    int x, o = o;
 
     for (int i = 0; i < gameresult.length(); i++) {
         if (gameresult[i] == 'X' || gameresult[i] == 'O' || gameresult[i] == '.') {
@@ -14,7 +14,7 @@ string TicToc(string gameresult) {
         }
     }
 
-    if (x > 5 || ((x - 1) != 0)) cout << "Incorrect";
+    if (x > 5 || ((x - 1) != o)) cout << "Incorrect";
     else {
         ///------------------------------------------------------------------------------------------
         if (gameresult[0] == 'X' && gameresult[3] == 'X' && gameresult[6] == 'X') cout << "Petya won";
@@ -45,7 +45,7 @@ string TicToc(string gameresult) {
     }
 }
 int main(){
-    cout << "Enter the result of the game in three lines";
+    cout << "Enter the result of the game in three lines" << endl;
     string playground1 , playground2, playground3;
     cin >> playground1 >> playground2 >> playground3;
     string gameresult = playground1 + playground2 + playground3;
