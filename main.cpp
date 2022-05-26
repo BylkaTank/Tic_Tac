@@ -14,7 +14,7 @@ string TicToc(string gameresult) {
         }
     }
 
-    if (x > 5 || ((o - 1) != x)) cout << "Incorrect";
+    if (x > 5 || ((x - 1) != 0)) cout << "Incorrect";
     else {
         ///------------------------------------------------------------------------------------------
         if (gameresult[0] == 'X' && gameresult[3] == 'X' && gameresult[6] == 'X') cout << "Petya won";
@@ -45,10 +45,10 @@ string TicToc(string gameresult) {
     }
 }
 int main(){
+    cout << "Enter the result of the game in three lines";
     string playground1 , playground2, playground3;
     cin >> playground1 >> playground2 >> playground3;
     string gameresult = playground1 + playground2 + playground3;
-    cout << gameresult;
     cout << TicToc(gameresult);
 }
 
