@@ -35,19 +35,20 @@ string TicToc(string gameresult) {
         if (gameresult[6] == 'X' && gameresult[7] == 'X' && gameresult[8] == 'X') cout << "Petya won";
         else if (gameresult[6] == 'O' && gameresult[7] == 'O' && gameresult[8] == 'O') cout << "Vanya won";
         ///------------------------------------------------------------------------------------------------
-
         if (gameresult[0] == 'X' && gameresult[4] == 'X' && gameresult[8] == 'X') cout << "Petya won";
         else if (gameresult[0] == 'O' && gameresult[4] == 'O' && gameresult[8] == 'O') cout << "Vanya won";
 
         if (gameresult[2] == 'X' && gameresult[4] == 'X' && gameresult[6] == 'X') cout << "Petya won";
         else if (gameresult[2] == 'O' && gameresult[4] == 'O' && gameresult[6] == 'O') cout << "Vanya won";
-
+        ///-----------------------------------------------------------------------------------------------
         else cout << "Nobody";
     }
 }
 int main(){
-    string gameresult = "";
-    cin >> gameresult;
+    string playground1 , playground2, playground3;
+    cin >> playground1 >> playground2 >> playground3;
+    string gameresult = playground1 + playground2 + playground3;
+    cout << gameresult;
     cout << TicToc(gameresult);
 }
 
